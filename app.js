@@ -6,14 +6,16 @@ const users = [
   { name: "Tom", age: 22, address: "Australia" },
   { name: "Emma", age: 27, address: "New Zealand" },
   { name: "James", age: 35, address: "USA" },
-  { name: "Lily", age: 23, address: "UK" },
+  { name: "Lily", age: 23, address: "USA" },
   { name: "Michael", age: 32, address: "Canada" },
   { name: "Sophia", age: 29, address: "Australia" },
-  { name: "Daniel", age: 31, address: "New Zealand" },
+  { name: "Daniel", age: 31, address: "USA" },
   { name: "Olivia", age: 26, address: "USA" },
   { name: "Lucas", age: 33, address: "UK" },
 ];
 
-users.forEach((user) => {
-  console.log(user.name);
-});
+users
+  .filter((user) => user.address === "USA")
+  .forEach((user) => {
+    console.log(user.name);
+  });
