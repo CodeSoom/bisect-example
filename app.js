@@ -17,6 +17,7 @@ const users = [
 users
   .filter((user) => user.address === "USA")
   .filter((user) => use.age >= 30)
+  .filter((user) => user.name.startsWith("J"))
   .forEach((user) => {
     console.log(user.name);
   });
